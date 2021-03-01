@@ -14,8 +14,7 @@
 //////////////////////////////////////
 
 /*
-g++ ant.cpp Arrow.cpp dodecahedron.cpp Extra_Operators.hpp geometry.cpp MainOpenGL.cpp matrix.cpp PovRayWriter.cpp simplex.cpp Turtle.cpp VectorND.cpp -lm -lGL -lGLU -lglut
-
+Compile With c++ main.cpp -lGL -lGLU -lglut -o topology
 */
 
 /*variables*/ 
