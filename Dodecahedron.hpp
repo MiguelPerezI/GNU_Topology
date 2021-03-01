@@ -206,11 +206,11 @@ public:
 
     void renderPentagon() {
 
-        f0.renderFacetOpenGL(500);
-        f1.renderFacetOpenGL(500);
-        f2.renderFacetOpenGL(500);
-        f3.renderFacetOpenGL(500);
-        f4.renderFacetOpenGL(500);
+        f0.renderFacetOpenGL(700);
+        f1.renderFacetOpenGL(700);
+        f2.renderFacetOpenGL(700);
+        f3.renderFacetOpenGL(700);
+        f4.renderFacetOpenGL(700);
     }
 };
 

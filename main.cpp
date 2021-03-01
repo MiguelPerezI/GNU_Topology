@@ -126,7 +126,7 @@ void updateProcessingProto() {
 
     if (ciclo > 0) {
 
-      double c = 3.0*cos(count);
+      double c = 1.5 * cos(count);
 
       if (c < 0.0)
         for (int i = 0; i < 20; i++)
@@ -284,15 +284,6 @@ void init(double theta)
                                     /* Z far */ 10000.0);
   glMatrixMode(GL_MODELVIEW);
 
-  glLoadIdentity();
-  gluLookAt( -3.0, -3.0, -5.0,      /* eye is at (0,0,5) */
-             0.0,  0.0,  1.0,      /* center is at (0,0,0) */
-             0.0,  0.0,  1.0);      /* up is in positive Y direction */
-
-  /* Adjust Board position to be asthetic angle. */
-  //glTranslatef(0.0, 0.15, -0.0);
-  glRotatef(theta, 0.0, 0.0, 1.0);
-
   glEnable(GL_NORMALIZE);
 
   glutSwapBuffers();
@@ -303,6 +294,13 @@ void TimerFunction(int value) {
   count += 0.01;
   rotSpeed += 0.001;
   ciclo += 1;
+
+  glLoadIdentity();
+  gluLookAt( 4.0*cos(count*0.5), 4.0*sin(count*0.5), 4.0,      /* eye is at (0,0,5) */
+             0.5*cos(count*2.5), 0.5*sin(count*2.5),  0.0,      /* center is at (0,0,0) */
+             0.0,  0.0,  1.0);      /* up is in positive Y direction */
+
+  //glRotatef(count, 0.0, 0.0, 1.0);
 
   if (count > 2 * M_PI) count = 0;
   if (ciclo > 100) ciclo = 1;
